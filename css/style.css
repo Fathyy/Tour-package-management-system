@@ -1,0 +1,56 @@
+:root{
+    --bold-1:#38023B;
+    --bol-2:#C879FF;
+    --neutral-1:#F6EFEE;
+    --neutral-2:#F9DBBD;
+    --shouting-clr:#7F9183;
+    --font-4:400;
+    --font-5:500;
+    --font-6:600;
+    --font-7:700;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+/* index styling begins here */
+.link-remove{
+    text-decoration: none;
+}
+.headings{
+    font-size: 40px;
+}
+/* index styling ends  here */
+
+/* package details */
+.errorWrap {
+    padding: 10px;
+    margin: 0 0 20px 0;
+    background: #fff;
+    border-left: 4px solid #dd3d36;
+    -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+}
+.succWrap{
+    padding: 10px;
+    margin: 0 0 20px 0;
+    background: #fff;
+    border-left: 4px solid #5cb85c;
+    -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+}
+/* package details */
+/* top section */
+.font-5{
+    font-weight: var(--font-5);
+
+}
+.font-6{
+    font-weight: var(--font-6);
+
+}
+.enquiry-link{
+    color: black;
+}
+/* top section */
