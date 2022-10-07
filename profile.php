@@ -1,6 +1,5 @@
 <?php
-session_start();
-include "inludes/config.php";
+require 'includes/config.php';
 if (strlen($_SESSION['login']) ==0) 
 {
     header ('Location:index.php');
@@ -24,14 +23,14 @@ else {
 }
 ?>
 
-<?php 'require top_section.php'; ?>
-
 <div class="container">
+<?php include 'includes/top_section.php';?>
     <div class="row">
         <form action="" method="post">
-        <!-- error handling goes here -->
-               <?php if($error){?><div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php } 
-				else if($msg){?><div class="succWrap"><strong>SUCCESS</strong>:<?php echo htmlentities($msg); ?> </div><?php }?>
+        <!-- error handling code -->
+    <?php if(isset($error)){?><div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php } 
+       else if(isset($msg)){?><div class="succWrap"><strong>SUCCESS</strong>:<?php echo htmlentities($msg); ?> </div><?php }?>
+        <!-- error handling code -->
         <?php
         $useremail=$_SESSION['login'];
         $sql="SELECT * FROM tblusers WHERE EmailId=:useremail";

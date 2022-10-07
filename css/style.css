@@ -4,10 +4,6 @@
     --neutral-1:#F6EFEE;
     --neutral-2:#F9DBBD;
     --shouting-clr:#7F9183;
-    --font-4:400;
-    --font-5:500;
-    --font-6:600;
-    --font-7:700;
 }
 
 body{
@@ -20,6 +16,25 @@ body{
 }
 .headings{
     font-size: 40px;
+}
+.package-image{
+    width: 100%;
+    height: 150px;
+}
+.package-details-image{
+    width: 100%;
+    height: 350px;
+}
+.view{
+  background-color: var(--bold-1) ; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 6px;
 }
 /* index styling ends  here */
 
@@ -43,14 +58,52 @@ body{
 /* package details */
 /* top section */
 .font-5{
-    font-weight: var(--font-5);
+    font-weight: 500;
 
 }
 .font-6{
-    font-weight: var(--font-6);
+    font-weight: 600;
 
+}
+.login-nav-main{
+    display: flex;
+    justify-content: space-between;
+    row-gap: 2rem;
+}
+.login-nav-right{
+    margin-left: 1rem;
+}
+.login-nav > li{
+    padding: 0.25rem 0.5rem;
+}
+.login-nav > li >a{
+    text-decoration: none;
+    font-family: 500;
 }
 .enquiry-link{
     color: black;
+}
+.admin-toll{
+    background-color: var(--bol-2);
+}
+.admin-link{
+    color: var(--neutral-1);
+}
+.title{
+    background-color: var(--neutral-2);
+}
+.heading{
+    color: var(--bold-1);
+}
+.navbar-styling{
+    background-color: var(--neutral-1);
+}
+.nav-link{
+    color: var(--bol-2);
+}
+.clearfix:after {
+    content:"";
+    display:table;
+    clear:both;
 }
 /* top section */

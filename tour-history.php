@@ -1,5 +1,4 @@
 <?php
-session_start();
 include('includes/config.php');
 if(strlen($_SESSION['login'])==0)
 	{	
@@ -59,8 +58,10 @@ else {
     <div class="row">
         <h3>My tour history</h3>
         <form action="" method="post">
-        <?php if($error){?><div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php } 
-				else if($msg){?><div class="succWrap"><strong>SUCCESS</strong>:<?php echo htmlentities($msg); ?> </div><?php }?>
+        <!-- error handling code -->
+    <?php if(isset($error)){?><div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php } 
+       else if(isset($msg)){?><div class="succWrap"><strong>SUCCESS</strong>:<?php echo htmlentities($msg); ?> </div><?php }?>
+        <!-- error handling code -->
 
                 <table border="1" width="100%">
                 <tr align="center">

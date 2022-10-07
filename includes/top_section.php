@@ -4,20 +4,20 @@ include 'header.php';
  if (isset($_SESSION['login']))
  {?>
  <div class="container">
-    <div class="row">
+    <div class="row login-nav-main">
         <div class="col-sm-12 col-md-6 col-lg-6">
-            <ul>
-                <li><a href="index.html" class="font-5"><i class="fa-light fa-house"></i></a></li>
-                <li><a href="profile.php" class="font-5">My Profile</a></li>
-                <li><a href="change-password.php" class="font-5">Change Password</a></li>
-                <li><a href="tour-history.php" class="font-5">My tour history</a></li>
-                <li><a href="issuetickets.php" class="font-5">Ticket Issues</a></li>
+            <ul class="d-flex flex-row login-nav-left" style="list-style-type:none;">
+                <li><a href="index.html"><i class="fa-light fa-house"></i></a></li>
+                <li><a href="profile.php">My Profile</a></li>
+                <li><a href="change-password.php">Change Password</a></li>
+                <li><a href="tour-history.php">My tour history</a></li>
+                <li><a href="tickets-issue.php">Ticket Issues</a></li>
             </ul>
 
         </div>
 
         <div class="col-sm-12 col-md-6 col-lg-6">
-            <ul>
+            <ul class="d-flex flex-row login-nav-right" style="list-style-type:none;">
                 <li>Welcome :</li>
                 <li><?php echo htmlentities($_SESSION['login'], ENT_QUOTES);?></li>
                 <li><a href="logout.php">/ logout</a></li>
@@ -29,22 +29,25 @@ include 'header.php';
  
    
 <?php } else {?>
-  <section style="background-color:aqua;">
+  <section class="admin-toll">
     <div class="container">
         <div class="row">
             <div class="col-sm-12 col-md-6 col-lg-6">
                 <ul class="d-flex flex-row" style="list-style-type:none;">
                 <li style="list-style-type:none;"><a href="index.html"><i class="fa-regular fa-house"></i></a></li>
-                    <li><a href="admin/index.php" class="link-remove font-6">Admin Login</a></li>
+                    <li><a href="admin/index.php" class="link-remove font-6 admin-link">Admin Login</a></li>
                 </ul>
 
             </div>
 
             <div class="col-sm-12 col-md-6 col-lg-6">
             <ul class="d-flex flex-row" style="list-style-type:none;">
-                <li class="pe-3 font-6">Toll Number : 123-4568790</li>
-                <li class="pe-3"><a href="#" data-toggle="modal" data-target="#myModal" class="link-remove font-6">Sign Up</a></li>
-                <li class="pe-3"><a href="#" data-toggle="modal" data-target="#myModal4" class="link-remove font-6">Log In</a></li>
+                <li class="pe-3 font-6 admin-link">Toll Number : 123-4568790</li>
+                <?php
+                require "signUp.php";
+                require "logIn.php";
+                ?>
+                
             </ul>
             </div>
         </div>
@@ -53,24 +56,24 @@ include 'header.php';
     </section>
     
 <?php } ?>
-<section style='background-color: burlywood;'>
+<section class="title">
 <div class="container">
     <div class="row">
-        <div class="col-sm-12 col-md-6 col-lg-6">
-            <a href="index.php" class="link-remove headings font-6">Tourism Management System</a>
+        <div class="col-sm-12">
+            <a href="index.php" class="link-remove headings font-6 heading">Tourism Management System</a>
          </div>
 
-         <div class="col-sm-12 col-md-6 col-lg-6">
+         <!-- <div class="col-sm-12 col-md-6 col-lg-6">
             <ul class="d-flex flex-row" style="list-style-type:none;">
                 <li class="pe-3"><i class="fa-regular fa-lock"></i></li>
                 <li class="pe-3 font-6">Safe and Secure</li>
             </ul>
-         </div>
+         </div> -->
     </div>
 </div>
 </section>
 
-<section style="background-color: darkslategray;">
+<section class="navbar-styling">
 <div class="container">
   <div class="row">
 <nav class="navbar navbar-expand-lg">
@@ -113,4 +116,5 @@ include 'header.php';
 </div>
 </div>
             </section>
-            <?php require 'includes/footer.php'; ?>
+            <?php require 'footer.php'; ?>
+            

@@ -1,12 +1,14 @@
 <?php
 session_status();
 require 'includes/config.php';
-include 'includes/top_section.php';
 ?>
 
+<style>
+<?php include 'css/style.css';?>
+</style>
+<?php include ('includes/top_section.php');?>
 <div class="container">
     <div class="row">
-        <div class="rock-bottom">
             <h3>Package List</h3>
             <?php $sql = "SELECT * FROM tbltourpackages";
             $query = $dbh->prepare($sql);
@@ -16,7 +18,7 @@ include 'includes/top_section.php';
             if ($query->rowCount() >0) {
                 foreach ($results as $result) {?>
                     <div class="col-md-3 wow animate__animated animate__fadeInLeft" data-wow-delay=".5s">
-                        <img src="Admin/images/<?php echo htmlentities($result->PackageImage);?>" class="img-responsive" alt="no image">
+                        <img src="images\<?php echo htmlentities($result->PackageImage);?>" class="package-image" alt="no image">
                         </div>
                     <div class="col-md-6 wow animate__animated animate__fadeInUp" data-wow-delay=".5s">
                         <h4>Package Name: <?php echo htmlentities($result->PackageName);?></h4>
@@ -32,10 +34,6 @@ include 'includes/top_section.php';
                     <div class="clearfix"></div>
                 
             <?php } } ?>
-
-            
-        </div>
-        
     </div>
 </div>
 <?php require 'includes/bottom_section.php'; ?>

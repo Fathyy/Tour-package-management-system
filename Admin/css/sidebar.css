@@ -1,0 +1,104 @@
+:root{
+    --bold-1:#38023B;
+    --bol-2:#C879FF;
+    --neutral-1:#F6EFEE;
+    --neutral-2:#F9DBBD;
+    --shouting-clr:#7F9183;
+}
+
+/* sidebar menu styling begins here */
+.side-bar{
+    padding: 2.1rem 1.2rem; 
+    background: var(--bold-1); 
+}
+.logo-name-button{
+    display: flex;
+    flex-direction: row;
+}
+.logo-name{
+    padding-left: 0.5rem;
+}
+.logo-button{
+    margin-left: 0.5rem;
+}
+.logo-admin{
+    padding-left: 1rem;  
+} 
+.admin-textt{
+    color: var(--neutral-1);
+    font-weight: 500;
+    margin-left: 0.5rem;
+}
+#menu, #create-manage-sub{
+    list-style-type: none;
+}
+#create-manage-sub > li > a{
+    color: var(--neutral-1);
+    font-weight: 500;
+}
+#menu > li> a {
+    color: var(--neutral-1);
+    font-weight: 500;
+}
+.menu-icon{
+    margin-right: 8px;
+}
+#menu > li > a > span{
+    color: var(--neutral-1);
+    font-weight: 500;
+}
+.menu-items{
+    padding-left: 1rem;
+    padding: 1rem;
+}
+.menu-items > a{
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--bold-1);
+}
+/* dropdown styling of top section */
+.drop-btn {
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 10px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .dropdown > span{
+    color: var(--neutral-1);
+    font-weight: 500;
+  }
+/* sidebar menu styling ends here */

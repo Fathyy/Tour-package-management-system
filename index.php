@@ -2,9 +2,12 @@
 session_status();
 require 'includes/config.php';
 ?>
+<style>
+    <?php include 'css/style.css';?>
+</style>
 
 <!-- rupes section begins here -->
-<?php include 'includes/top_section.php';?>
+<?php include ('includes/top_section.php');?>
 <div class="container my-5">
     <div class="row">
         <div class="col-md-4 wow animate__animated animate__fadeInDown" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">
@@ -41,12 +44,13 @@ require 'includes/config.php';
 				<h4><a href="offers.html" class="link-remove">US APP OFFER</a></h4>
 
             </div>
-            <div class="clearfix"></div>
+            
         </div>
         
     </div>
 </div>
 <!-- rupes section ends here -->
+
 
 <!-- packages section begins here -->
 
@@ -57,30 +61,25 @@ require 'includes/config.php';
         $sql="SELECT * FROM tbltourpackages order by rand() limit 4";
         $query=$dbh->prepare($sql);
         $query->execute();
-        $results=$query->fetchAll(PDO::FETCH_OBJ);
-        $cnt=1;
-        if ($query->rowCount() > 0) 
-        {
-            foreach ($results as $result) {?>
-                <div class="col-md-3 wow animate__animated animate__fadeInLeft" data-wow-delay=".5s">
-                    <img src='/images/<?php echo htmlentities($result->PackageImage);?>' class="image-responsive" alt='no image'>
-                </div>
-                <div class="col-md-6 wow animate__animated animate__fadeInUp" data-wow-delay=".5s">
-                    <h4>Package Name: <?php echo htmlentities($result->PackageName);?></h4>
-                    <h6><h4>Package Type: <?php echo htmlentities($result->PackageType);?></h4></h6>
-                    <p><b>Package Location:</b> <?php echo htmlentities($result->PackageLocation);?></p>
-                    <p><b>Features</b> <?php echo htmlentities($result->PackageFetures);?></p>
-                </div>
-                <div class="col-md-3 wow animate__animated animate__fadeInRight" data-wow-delay=".5s">
-                    <h5>USD <?php echo htmlentities($result->PackagePrice);?></h5>
-                    <a href="package-details.php?pkgid=<?php echo htmlentities($result->PackageId)?>;"></a>
+        $query->setFetchMode(PDO::FETCH_ASSOC);
+        while ($r=$query->fetch()) {?>
+        <div class="col-md-3 wow animate__animated animate__fadeInLeft" data-wow-delay=".5s">
+        <img src="images\<?php echo sprintf($r['PackageImage']);?>" class='package-image' alt='no image' >
+        </div>
+        <div class="col-md-6 wow animate__animated animate__fadeInUp" data-wow-delay=".5s">
+        <h4>Package Name: <?php echo sprintf($r['PackageName']);?> </h4>
+        <h6><h4>Package Type: <?php echo sprintf($r['PackageType']);?></h4></h6>
+        <p><b>Package Location:</b><?php  echo sprintf($r['PackageLocation']);?></p>
+        <p><b>Features</b><?php echo sprintf($r['PackageFetures']);?></p>
+        </div>
 
-                </div>
-                <div class="clearfix"></div>
-            <?php  } }?>
-        <div><a href="package-list.php">View more packages</a></div>
+        <div class="col-md-3 wow animate__animated animate__fadeInRight" data-wow-delay=".5s">
+        <h5>USD <?php echo sprintf($r['PackagePrice']);?></h5>
+        <a href="package-details.php?pkgid=<?php echo sprintf($r['PackageId']);?>" class="view">Details</a>
+            </div>
+       <?php } ?>
         
-       <div class="clearfix"></div>
+        
     </div>
 </div>
 <!-- packages section ends here -->
@@ -118,11 +117,9 @@ require 'includes/config.php';
 				<p>Booking</p>
 
             </div>
-            <div class="clearfix"></div>
         </div>
     </div>
 </div>
 <!-- routes section ends here -->
-
-<?php require 'includes/bottom_section.php'; ?>
+<?php require ('includes/bottom_section.php'); ?>
 

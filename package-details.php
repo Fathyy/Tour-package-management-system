@@ -1,18 +1,17 @@
 <?php
 session_status();
 require 'includes/config.php';
-
 if (isset($_POST['submit2'])) 
 {
     $pid=intval($_GET['pkgid']);
-    $useremail=$_SESSION['login'];
+    $useremail=(isset($_SESSION['login']));
     $fromdate=$_POST['fromdate'];
     $todate=$_POST['todate'];
     $comment=$_POST['comment'];
     $status=0;
     $sql='INSERT INTO tblbooking(PackageId, UserEmail, FromDate, ToDate, Comment, status)
-    VALUES(:pid, :useremail, :fromdate, :todate, :comment, :status)';
-    $query->$dbh->prepare($sql);
+    VALUES(:pid,:useremail,:fromdate,:todate,:comment,:status)';
+    $query=$dbh->prepare($sql);
     $query->bindParam(':pid', $pid, PDO::PARAM_STR);
     $query->bindParam(':useremail', $useremail, PDO::PARAM_STR);
     $query->bindParam(':fromdate', $fromdate, PDO::PARAM_STR);
@@ -29,14 +28,18 @@ if (isset($_POST['submit2']))
         $error="something went wrong! Please try again";
     }
 
-}
-?>
+} ?>
+
+<style>
+<?php include 'css/style.css';?>
+</style>
+
 <?php include 'includes/top_section.php';?>
 <div class="container">
-    <!-- there is php error handling code here -->
-    <?php if($error) {?> 
-    <div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error);?></div>
-    <?php } else if($msg) { ?> <div class="succWrap"><strong>SUCCESS</strong>:<?php echo htmlentities($msg);?></div><?php } ?>
+    <!-- error handling code -->
+    <?php if(isset($error)){?><div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php } 
+       else if(isset($msg)){?><div class="succWrap"><strong>SUCCESS</strong>:<?php echo htmlentities($msg); ?> </div><?php }?>
+        <!-- error handling code -->
     <?php
     $pid=intval($_GET['pkgid']);
     $sql='SELECT *from tbltourpackages WHERE PackageId=:pid';
@@ -48,10 +51,10 @@ if (isset($_POST['submit2']))
     if ($query->rowCount() > 0) {
         foreach ($results as $result) 
         {?>
-            <form action="" method="post">
+            <form method="post">
                 <div class="row">
                     <div class="col-md-4">
-                        <img src="Admin/images/<?php echo htmlentities($result->PackageImage);?>" class="img-responsive" alt="no image">
+                        <img src="images\<?php echo htmlentities($result->PackageImage);?>" class="package-details-image" alt="no image">
                     </div>
                     <div class="col-md-8">
                         <h2><?php echo htmlentities($result->PackageName);?></h2>
@@ -63,11 +66,11 @@ if (isset($_POST['submit2']))
                         <div class="ban-bottom">
                             <div class="bnr-right">
                                 <label class="inputLabel">From</label>
-				                <input class="date" id="datepicker" type="text" placeholder="dd-mm-yyyy"  name="fromdate" required="">
+				                <input type="date" placeholder="dd-mm-yyyy"  name="fromdate" required="">
                             </div>
                             <div class="bnr-right">
-                                <label class="inputLabel">From</label>
-				                <input class="date" id="datepicker" type="text" placeholder="dd-mm-yyyy"  name="fromdate" required="">
+                                <label class="inputLabel">To</label>
+				                <input type="date" placeholder="dd-mm-yyyy"  name="todate" required="">
 
                             </div>
                         </div>
@@ -80,7 +83,6 @@ if (isset($_POST['submit2']))
 
                     <h3>Package Details</h3>
                     <p><?php echo htmlentities($result->PackageDetails);?></p>
-                    <div class="clearfix"></div>
                 </div>
 
 
@@ -95,14 +97,13 @@ if (isset($_POST['submit2']))
                             <?php 
                             if (isset($_SESSION['login']) ) {?>
                                 <li align="center">
-                                    <button type="submit" name="submit2">Book</button>
+                                    <button type="submit" name="submit2" class="view">Book</button>
                                 </li>
                             <?php } else {?>
                                 <li class="sigi" align="center">
-                                    <a href="#" data-toggle="modal" data-target="#myModal" class="btn-primary btn">Book</a>
+                                    <a href="#" data-toggle="modal" data-target="#myModal" class="view">Book</a>
                                 </li>
                             <?php } ?>
-                            <div class="clearfix"></div>
                         </ul>
                     </div>
                 </div>
