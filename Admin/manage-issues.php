@@ -119,20 +119,3 @@ popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status
 </div>
 
 <?php } ?>
-
-
-
-
-
-
-
-
-
-<!-- bootstrap breadcrumb for navigating to diff pages starts here -->
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="dashboard.php">Home</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Manage Issues</li>
-  </ol>
-</nav>
-<!-- bootstrap breadcrumb for navigating to diff pages ends here -->

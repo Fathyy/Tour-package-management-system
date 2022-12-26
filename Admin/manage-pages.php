@@ -7,7 +7,7 @@ if (strlen($_SESSION['login'])==0) {
 else {
   if(isset($_POST['submit'])) {
     $pagetype=$_GET['type'];
-    $pagedetails=$_POST['pgedetails'];
+    $pagedetails=$_POST['pagedetails'];
     $sql="UPDATE tblpages SET detail=:pagedetails WHERE type=:pagetype";
     $query=$dbh->prepare($sql);
     $query->bindParam(':pagetype', $pagetype, PDO::PARAM_STR);
@@ -80,7 +80,7 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
 
         <div class="tab-content">
           <div class="tab-pane active">
-            <form class="form-horizontal" name="package" method="post" enctype="multipart/form-data">
+            <form class="form-horizontal" name="package" method="post">
               <div class="form-group">
                 <label for="focusedinput" class="col-sm-2 control-label">Select Page</label>
                 <div class="col-sm-8">
@@ -141,7 +141,7 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
               <div class="form-group">
               <label for="focusedinput" class="col-sm-2 control-label">Package Details</label>
               <div class="col-sm-8">
-                <textarea name="pgedetails" id="pgedetails" cols="50" rows="5" placeholder="package details" required>
+                <textarea name="pagedetails" id="pagedetails" cols="50" rows="5" placeholder="package details" required>
                   <?php
                   $pagetype=(isset($_GET['type']));
                   $sql="SELECT detail from tblpages WHERE type=:pagetype";

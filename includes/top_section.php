@@ -1,12 +1,13 @@
 <?php
 session_start();
-include 'header.php';
+include 'includes/header.php';
  if (isset($_SESSION['login']))
  {?>
+
  <div class="container">
-    <div class="row login-nav-main">
-        <div class="col-sm-12 col-md-6 col-lg-6">
-            <ul class="d-flex flex-row login-nav-left" style="list-style-type:none;">
+    <div class="row two-sections">
+        <div class="col-sm-12 col-md-6 col-lg-6 login-nav-left">
+            <ul class="d-flex flex-row" style="list-style-type:none;">
                 <li><a href="index.html"><i class="fa-light fa-house"></i></a></li>
                 <li><a href="profile.php">My Profile</a></li>
                 <li><a href="change-password.php">Change Password</a></li>
@@ -16,8 +17,8 @@ include 'header.php';
 
         </div>
 
-        <div class="col-sm-12 col-md-6 col-lg-6">
-            <ul class="d-flex flex-row login-nav-right" style="list-style-type:none;">
+        <div class="col-sm-12 col-md-6 col-lg-6 login-nav-right">
+            <ul class="d-flex flex-row ms-5" style="list-style-type:none;">
                 <li>Welcome :</li>
                 <li><?php echo htmlentities($_SESSION['login'], ENT_QUOTES);?></li>
                 <li><a href="logout.php">/ logout</a></li>

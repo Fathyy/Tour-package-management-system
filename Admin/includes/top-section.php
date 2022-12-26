@@ -12,15 +12,7 @@
         <p>Welcome<span>Administrator</span></p>
     </div>
 
-    <!-- <div class="dropdown">
-        <a href="#" class="btn btn-secondary dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
-         <ul class="dropdown-menu">
-            <li><a href="change-password.php"><i class="fa-solid fa-lock"></i></a></li>
-            <li><a href="logout.php"><i class="fa-solid fa-right-from-bracket"></i></a></li>
-    </ul> 
-</div> -->
 <div class="dropdown">
-    <!-- <button class="drop-btn"></button> -->
     <i class="fa-solid fa-angle-down drop-btn"></i>
     <div class="dropdown-content">
         <a href="change-password.php">Change Password</a>

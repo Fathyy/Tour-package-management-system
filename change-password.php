@@ -1,7 +1,6 @@
 <?php
-session_start();
 require 'includes/config.php';
-if (strlen($_SESSION['login']) ==0) 
+if (strlen($_SESSION['login']) == 0) 
 {
     header('location:index.php');
 }
@@ -20,10 +19,10 @@ else {
         if ($query->rowCount() > 0) {
             $con='UPDATE tblusers SET password=:newpassword WHERE
             EmailId=:email';
-            $chngpwd=$dbh->prepare($con);
-            $chngpwd->bindParam(':email', $email, PDO::PARAM_STR);
-            $chngpwd->bindParam(':newpassword', $newpassword, PDO::PARAM_STR);
-            $chngpwd->execute();
+            $chngpwd2=$dbh->prepare($con);
+            $chngpwd2->bindParam(':email', $email, PDO::PARAM_STR);
+            $chngpwd2->bindParam(':newpassword', $newpassword, PDO::PARAM_STR);
+            $chngpwd2->execute();
             $msg="your password was changed";
         }
         else {
@@ -32,5 +31,31 @@ else {
     
 }
 }
+include ('includes/top_section.php');
 ?>
-<?php include('includes/top_section.php');?>
+  <?php include 'css/style.css';?>
+		</style>
+<div class="container">
+    <div class="row">
+        <div class="change-passoword">
+        <form method="post">
+          <div class="mb-3 col-md-2">
+            <label for="Cpassword" class="form-label">Current Password</label>
+            <input type="password" class="form-control" name="password">
+            </div>
+
+          <div class="mb-3 col-md-2">
+            <label for="Npassword" class="form-label"> New Password</label>
+            <input type="password" class="form-control" name="newpassword" id="newpassword" >
+          </div>
+
+           <div class="col-sm-8">
+          <button type="submit" class="btn btn-primary" name="submit5">submit</button>
+          </div>
+
+        </form>
+        </div>
+    </div>
+</div>
+
+

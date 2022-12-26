@@ -51,7 +51,8 @@ else {
   <?php require 'includes/top-section.php';?>
   </div>
 
-<div class="grids-section">
+<div class="container grids-section">
+  <div class="row">
   <!-- error and success messages begin here -->
   <?php if(isset($error)){?><div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php } 
 				else if(isset($msg)){?><div class="succWrap"><strong>SUCCESS</strong>:<?php echo htmlentities($msg); ?> </div><?php }?>
@@ -64,8 +65,8 @@ else {
   </ol>
 </nav>
 <!-- bootstrap breadcrumb for navigating to diff pages ends here -->
+          <h3>Manage Bookings</h3>
           <div class="table-info">
-            <h2>Manage Bookings</h2>
             <table id="table">
               <thead>
                 <tr>
@@ -141,6 +142,7 @@ else {
               </tbody>
             </table>
           </div>
+</div>
 </div>
 
 <div class="footer-container">

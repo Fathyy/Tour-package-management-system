@@ -10,7 +10,7 @@ else {?>
 </style>
 
 <div class="containers">
-    <!-- the sidebar and top section are enclosed in divs to become children of containers parent -->
+    <!-- the sidebar and top section are enclosed in divs to become children of containers grid -->
 <div class="sidebar-container">
 <?php include 'includes/sidebar-menu.php';?>
 </div>

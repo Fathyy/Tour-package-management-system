@@ -1,5 +1,4 @@
 <?php
-session_status();
 require 'includes/config.php';
 ?>
 

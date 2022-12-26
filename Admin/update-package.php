@@ -30,41 +30,36 @@ header('location:index.php');
       $msg="Package updated successfully";
     }
     ?>
-
-<style>
-		.errorWrap {
-    padding: 10px;
-    margin: 0 0 20px 0;
-    background: #fff;
-    border-left: 4px solid #dd3d36;
-    -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
-    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
-}
-.succWrap{
-    padding: 10px;
-    margin: 0 0 20px 0;
-    background: #fff;
-    border-left: 4px solid #5cb85c;
-    -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
-    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
-}
+      <style>
+  <?php include 'css/style.css';?>
 		</style>
 
-    <div class="container">
-      <div class="row">
-      <?php include('includes/top-section.php');?>
+    <div class="containers">
+        <div class="sidebar-container">
+    <?php include('includes/sidebar-menu.php');?>	
+    </div>
 
+    <div class="top-container">
+      <?php require 'includes/top-section.php';?>
+      </div>
+
+      <div class="container grids-section">
+        <div class="row">
       <!-- bootstrap breadcrumb for navigating to diff pages starts here -->
         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item active" aria-current="page">Update Package</li>
           </ol>
         </nav>
-<!-- bootstrap breadcrumb for navigating to diff pages starts here -->
-<div class="grid-form">
+<!-- bootstrap breadcrumb for navigating to diff pages ends here -->
+
+<div class="update-package">
   <h3>Update Packages</h3>
+  <!-- error and success messages begin here -->
   <?php if(isset($error)){?><div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php } 
 				else if(isset($msg)){?><div class="succWrap"><strong>SUCCESS</strong>:<?php echo htmlentities($msg); ?> </div><?php }?>
+        <!-- error and success messages end here -->
+        
         <div class="tab-content">
           <?php
           $pid=intval($_GET['pid']);
@@ -149,55 +144,13 @@ header('location:index.php');
 
             </form> 
         </div>
+</div>  
 </div>
-<!-- script-for sticky-nav -->
-<script>
-		$(document).ready(function() {
-			 var navoffeset=$(".header-main").offset().top;
-			 $(window).scroll(function(){
-				var scrollpos=$(window).scrollTop(); 
-				if(scrollpos >=navoffeset){
-					$(".header-main").addClass("fixed");
-				}else{
-					$(".header-main").removeClass("fixed");
-				}
-			 });
-			 
-		});
-		</script>
-     
-     <!--copy rights start here-->
-<?php include('includes/footer.php');?>
-<!--COPY rights end here-->
+</div>
 
-
-<!--/sidebar-menu-->
-<?php include('includes/sidebar-menu.php');?>		
-							</div>
-							<script>
-							var toggle = true;
-										
-							$(".sidebar-icon").click(function() {                
-							  if (toggle)
-							  {
-								$(".page-container").addClass("sidebar-collapsed").removeClass("sidebar-collapsed-back");
-								$("#menu span").css({"position":"absolute"});
-							  }
-							  else
-							  {
-								$(".page-container").removeClass("sidebar-collapsed").addClass("sidebar-collapsed-back");
-								setTimeout(function() {
-								  $("#menu span").css({"position":"relative"});
-								}, 400);
-							  }
-											
-											toggle = !toggle;
-										});
-							</script>
-
-      </div>
-    </div>
-    
+<div class="footer-container">
+<?php include 'includes/bottom-section.php';?>
+</div> 
  <?php }?>
 
 

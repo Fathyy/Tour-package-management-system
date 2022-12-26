@@ -13,6 +13,7 @@
 /* dashboard styling */
 .containers{
     display: grid;
+    height: 100vh;
 }
 
 .top-container{
@@ -206,6 +207,10 @@ nav> ol> li{
 /* breadcrumb styling ends here */
 .footer-container{
     margin-left: 1rem; 
+}
+
+.footer-container{
+    background-color: #C879FF;
 }
 
 

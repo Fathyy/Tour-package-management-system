@@ -10,7 +10,7 @@ if (isset($_POST['login'])) {
     $query->bindParam(':uname', $uname, PDO::PARAM_STR);
     $query->bindParam(':password', $password, PDO::PARAM_STR);
     $query->execute();
-    $results=$query->fetchAll(PbDO::FETCH_OBJ);
+    $results=$query->fetchAll(PDO::FETCH_OBJ);
     if ($query->rowCount() > 0) {
         $_SESSION['login'] = $_POST['username'];
         header('location:dashboard.php');

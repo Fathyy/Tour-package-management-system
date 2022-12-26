@@ -56,6 +56,7 @@ body{
     box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
 }
 /* package details */
+
 /* top section */
 .font-5{
     font-weight: 500;
@@ -65,20 +66,16 @@ body{
     font-weight: 600;
 
 }
-.login-nav-main{
-    display: flex;
-    justify-content: space-between;
-    row-gap: 2rem;
-}
-.login-nav-right{
-    margin-left: 1rem;
-}
-.login-nav > li{
-    padding: 0.25rem 0.5rem;
-}
-.login-nav > li >a{
+.login-nav-left > ul > li >a{
     text-decoration: none;
-    font-family: 500;
+    font-weight: 500;
+    color: var(--bold-1);
+}
+.two-sections{
+    margin-top: 10px;
+}
+.login-nav-left > ul > li{
+    margin-left: 10px;
 }
 .enquiry-link{
     color: black;
@@ -107,3 +104,26 @@ body{
     clear:both;
 }
 /* top section */
+
+/* footer styling begins here */
+.footer{
+    background-color: var(--bol-2);
+}
+.social-ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    
+}
+/* footer styling ends here */
+
+/* enquiry styling begins here */
+.enquiry{
+    margin-top: 1rem;
+    border: 1px solid black;
+}
+
+/* enquiry styling ends here */

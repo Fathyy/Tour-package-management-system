@@ -1,5 +1,4 @@
 <?php
-session_start();
 require 'includes/config.php';
 if (isset($_POST['submit1'])) 
 {
@@ -25,19 +24,25 @@ if (isset($_POST['submit1']))
         $error="something went wrong!";
     }
 }
-require 'top_section.php'
+require 'includes/top_section.php'
 ?>
+
+<style>
+<?php include 'css/style.css';?>
+</style>
 
 <div class="container">
     <div class="row">
+        <div class="col sm 8">
         <form action="" method="post">
-            <input type="text" class="form-control" name="fname"placeholder="Full Name">
-            <input type="email" class="form-control" name="email"placeholder="Your email">
-            <input type="text" class="form-control" name="mobileno"placeholder="Mobile Number">
-            <input type="text" class="form-control" name="subject"placeholder="Subject">
-            <textarea name="description" id="" cols="30" rows="10" class="form-control"placeholder="Description"></textarea>
-            <button type="submit" name="submit1" class="btn-primary btn">Submit</button>
+            <input type="text" class="form-control enquiry" name="fname"placeholder="Full Name">
+            <input type="email" class="form-control enquiry" name="email"placeholder="Your email">
+            <input type="text" class="form-control enquiry" name="mobileno"placeholder="Mobile Number">
+            <input type="text" class="form-control enquiry" name="subject"placeholder="Subject">
+            <textarea name="description" id="" cols="30" rows="10" class="form-control enquiry"placeholder="Description"></textarea>
+            <button type="submit" name="submit1" class="btn-primary btn enquiry">Submit</button>
         </form>
+        </div>
     </div>
 </div>
 <?php 'require bottom_section.php' ?>
