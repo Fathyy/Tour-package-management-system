@@ -5,7 +5,7 @@ $username ='root';
 $db = 'tms';
 $password = '';
 
-$dsn = "mysql:host=$host;port=3307;dbname=$db;charset=UTF8";
+$dsn = "mysql:host=$host;dbname=$db;charset=UTF8";
 
 try {
     
