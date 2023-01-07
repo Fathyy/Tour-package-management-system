@@ -1,10 +1,6 @@
 <?php
 include('includes/config.php');
-if(strlen($_SESSION['login'])==0)
-	{	
-header('location:index.php');
-}
-else {
+
     if (isset($_REQUEST['bkid'])) {
         $bid=intval($_GET['bkid']);
         $email=$_SESSION['login'];
@@ -47,7 +43,7 @@ else {
         {
         $error="You can't cancel booking before 24 hours";
         }
-        }
+    
         }
             }
 }

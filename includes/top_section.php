@@ -63,13 +63,6 @@ include 'includes/header.php';
         <div class="col-sm-12">
             <a href="index.php" class="link-remove headings font-6 heading">Tourism Management System</a>
          </div>
-
-         <!-- <div class="col-sm-12 col-md-6 col-lg-6">
-            <ul class="d-flex flex-row" style="list-style-type:none;">
-                <li class="pe-3"><i class="fa-regular fa-lock"></i></li>
-                <li class="pe-3 font-6">Safe and Secure</li>
-            </ul>
-         </div> -->
     </div>
 </div>
 </section>
@@ -108,8 +101,6 @@ include 'includes/header.php';
             <?php } else{ ?>
                 <li class="nav-item pe-3 mt-2"><a href="enquiry.php" class="link-remove enquiry-link font-6">Enquiry</a></li>
                 <?php } ?>
-                <div class="clearfix"></div>
-
       </ul>
     </div>
   </div>
