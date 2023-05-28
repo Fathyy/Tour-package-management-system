@@ -50,7 +50,7 @@ include('includes/config.php');
 ?>
 
 <?php require 'includes/top_section.php'?>
-<div class="container">
+<div class="container"> 
     <div class="row">
         <h3>My tour history</h3>
         <form action="" method="post">

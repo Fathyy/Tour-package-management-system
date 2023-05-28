@@ -6,7 +6,7 @@ require 'includes/config.php';
 <!-- rupes section begins here -->
 <div class="container my-5">
     <div class="row">
-        <div class="col-md-4 wow animate__animated animate__fadeInDown" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">
+        <div class="col-md-6 col-lg-4 wow animate__animated animate__fadeInDown" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">
             <div class="rup-left">
                 <a href="offers.html"><i class="fa-solid fa-dollar-sign"></i></a>
             </div>
@@ -16,7 +16,7 @@ require 'includes/config.php';
                 
             </div>
         </div>
-        <div class="col-md-4 wow animate__animated animate__fadeInDown" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">
+        <div class="col-md-6 col-lg-4 wow animate__animated animate__fadeInDown" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">
             <div class="rup-left">
             <a href="offers.html"><i class="fa-solid fa-square-h"></i></a>
 
@@ -27,7 +27,7 @@ require 'includes/config.php';
             </div>
         </div>
 
-        <div class="col-md-4 wow animate__animated animate__fadeInDown" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">
+        <div class="col-md-6 col-lg-4 wow animate__animated animate__fadeInDown" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">
             <div class="rup-left">
                 <a href="offers.html" ><i class="fa-regular fa-mobile"></i></a>
 
