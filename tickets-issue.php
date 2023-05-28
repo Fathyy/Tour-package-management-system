@@ -7,7 +7,7 @@ if (strlen($_SESSION['login']) == 0) {
 else {?>
     <?php include ('includes/top_section.php'); ?>
     <div class="container">
-        <h3 class="wow fadeInDown animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">Tickets issue</h3>
+        <h3>Tickets issue</h3>
         <form action="" method="post" onSubmit="return valid();">
         <?php if($error){?><div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php } 
 				else if($msg){?><div class="succWrap"><strong>SUCCESS</strong>:<?php echo htmlentities($msg); ?> </div><?php }?>

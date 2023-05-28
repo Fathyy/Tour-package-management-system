@@ -6,7 +6,7 @@ require 'includes/config.php';
 <!-- rupes section begins here -->
 <div class="container my-5">
     <div class="row">
-        <div class="col-md-6 col-lg-4 wow animate__animated animate__fadeInDown" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">
+        <div class="col-md-6 col-lg-4">
             <div class="rup-left">
                 <a href="offers.html"><i class="fa-solid fa-dollar-sign"></i></a>
             </div>
@@ -16,7 +16,7 @@ require 'includes/config.php';
                 
             </div>
         </div>
-        <div class="col-md-6 col-lg-4 wow animate__animated animate__fadeInDown" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">
+        <div class="col-md-6 col-lg-4">
             <div class="rup-left">
             <a href="offers.html"><i class="fa-solid fa-square-h"></i></a>
 
@@ -27,7 +27,7 @@ require 'includes/config.php';
             </div>
         </div>
 
-        <div class="col-md-6 col-lg-4 wow animate__animated animate__fadeInDown" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">
+        <div class="col-md-6 col-lg-4">
             <div class="rup-left">
                 <a href="offers.html" ><i class="fa-regular fa-mobile"></i></a>
 
@@ -56,17 +56,17 @@ require 'includes/config.php';
         $query->execute();
         $query->setFetchMode(PDO::FETCH_ASSOC);
         while ($r=$query->fetch()) {?>
-        <div class="col-md-3 wow animate__animated animate__fadeInLeft" data-wow-delay=".5s">
+        <div class="col-md-3>
         <img src="images\<?php echo sprintf($r['PackageImage']);?>" class='package-image' alt='no image' >
         </div>
-        <div class="col-md-6 wow animate__animated animate__fadeInUp" data-wow-delay=".5s">
+        <div class="col-md-6">
         <h4>Package Name: <?php echo sprintf($r['PackageName']);?> </h4>
         <h6><h4>Package Type: <?php echo sprintf($r['PackageType']);?></h4></h6>
         <p><b>Package Location:</b><?php  echo sprintf($r['PackageLocation']);?></p>
         <p><b>Features</b><?php echo sprintf($r['PackageFetures']);?></p>
         </div>
 
-        <div class="col-md-3 wow animate__animated animate__fadeInRight" data-wow-delay=".5s">
+        <div class="col-md-3">
         <h5>USD <?php echo sprintf($r['PackagePrice']);?></h5>
         <a href="package-details.php?pkgid=<?php echo sprintf($r['PackageId']);?>" class="view">Details</a>
             </div>
@@ -80,7 +80,7 @@ require 'includes/config.php';
 <!-- routes section begins here -->
 <div class="container my-5">
     <div class="row">
-        <div class="col-md-4 wow animate__animated animate__fadeInLeft" data-wow-delay=".5s">
+        <div class="col-md-4">
             <div class="rou-left">
                 <a href="#"><i class="fa-regular fa-question"></i></a>
             </div>
@@ -91,7 +91,7 @@ require 'includes/config.php';
             </div>
             <div class="clearfix"></div>
         </div>
-        <div class="col-md-4 wow animate__animated animate__fadeInDown" data-wow-delay=".5s">
+        <div class="col-md-4">
             <div class="rou-left">
                 <a href="#"><i class="fa-solid fa-user"></i></a>
             </div>
@@ -101,7 +101,7 @@ require 'includes/config.php';
             </div>
             <div class="clearfix"></div>
         </div>
-        <div class="col-md-4 wow animate__animated animate__fadeInRight" data-wow-delay=".5s">
+        <div class="col-md-4">
             <div class="rou-left">
                 <a href="#"><i class="fa-regular fa-ticket"></i></a>
             </div>
