@@ -54,7 +54,7 @@ error:function (){}
 </style>
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+<button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal2">
   Signup
 </button>
 

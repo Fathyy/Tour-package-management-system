@@ -34,22 +34,20 @@ include 'includes/header.php';
     <div class="container">
         <div class="row">
             <div class="col-sm-12 col-md-6 col-lg-6">
-                <ul class="d-flex flex-row" style="list-style-type:none;">
-                <li style="list-style-type:none;"><a href="index.html"><i class="fa-regular fa-house"></i></a></li>
-                    <li><a href="admin/index.php" class="link-remove font-6 admin-link">Admin Login</a></li>
+                <ul class="list-items">
+                  <li style="list-style-type:none;"><i class="fa-regular fa-house"></i></li>
+                  <li><a href="admin/index.php" class="link-remove font-6 admin-link">Admin Login</a></li>
                 </ul>
-
             </div>
 
             <div class="col-sm-12 col-md-6 col-lg-6">
-            <ul class="d-flex flex-row" style="list-style-type:none;">
-                <li class="pe-3 font-6 admin-link">Toll Number : 123-4568790</li>
-                <?php
-                require "signUp.php";
-                require "logIn.php";
-                ?>
-                
-            </ul>
+              <ul class="list-items">
+                  <li class="pe-3 font-6 admin-link">Toll Number : 123-4568790</li>
+                  <?php
+                  require "signUp.php";
+                  require "logIn.php";
+                  ?> 
+              </ul>
             </div>
         </div>
 

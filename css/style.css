@@ -5,7 +5,9 @@
     --neutral-2:#F9DBBD;
     --shouting-clr:#7F9183;
 }
-
+*{
+    box-sizing: border-box;
+}
 body{
     font-family: 'Poppins', sans-serif;
 }
@@ -58,6 +60,9 @@ body{
 /* package details */
 
 /* top section */
+.list-items{
+    display: inline;
+}
 .font-5{
     font-weight: 500;
 }
