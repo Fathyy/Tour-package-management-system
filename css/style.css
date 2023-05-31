@@ -61,7 +61,9 @@ body{
 
 /* top section */
 .list-items{
-    display: inline;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
 }
 .font-5{
     font-weight: 500;

@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'includes/header.php';
+require __DIR__ . '/header.php';
  if (isset($_SESSION['login']))
  {?>
 
@@ -28,14 +28,14 @@ include 'includes/header.php';
     </div>
  </div>
  
-   
+   <!-- if someone is not logged in -->
 <?php } else {?>
   <section class="admin-toll">
     <div class="container">
         <div class="row">
             <div class="col-sm-12 col-md-6 col-lg-6">
                 <ul class="list-items">
-                  <li style="list-style-type:none;"><i class="fa-regular fa-house"></i></li>
+                  <li style="list-style-type:none;"></li><i class="fa-regular fa-house"></i>
                   <li><a href="admin/index.php" class="link-remove font-6 admin-link">Admin Login</a></li>
                 </ul>
             </div>
@@ -106,5 +106,5 @@ include 'includes/header.php';
 </div>
 </div>
             </section>
-            <?php require 'footer.php'; ?>
+            <?php require __DIR__ . '/footer.php'; ?>
             
