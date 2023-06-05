@@ -4,6 +4,10 @@ require __DIR__ . '/header.php';
  if (isset($_SESSION['login']))
  {?>
 
+<style>
+    <?php require __DIR__. '/css/style.css';?>
+</style>
+
  <div class="container">
     <div class="row two-sections">
         <div class="col-sm-12 col-md-6 col-lg-6 login-nav-left">
@@ -32,10 +36,10 @@ require __DIR__ . '/header.php';
 <?php } else {?>
   <section class="admin-toll">
     <div class="container">
-        <div class="row">
+        <div class="row admin_toll_row">
             <div class="col-sm-12 col-md-6 col-lg-6">
                 <ul class="list-items">
-                  <li style="list-style-type:none;"></li><i class="fa-regular fa-house"></i>
+                  <li><i class="fa-regular fa-house"></i></li>
                   <li><a href="admin/index.php" class="link-remove font-6 admin-link">Admin Login</a></li>
                 </ul>
             </div>

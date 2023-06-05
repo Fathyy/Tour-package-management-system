@@ -60,10 +60,14 @@ body{
 /* package details */
 
 /* top section */
+.admin_toll_row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .list-items{
     list-style-type: none;
-    display: flex;
-    flex-direction: row;
+    display: inline-flex;
 }
 .font-5{
     font-weight: 500;
@@ -71,7 +75,7 @@ body{
 .font-6{
     font-weight: 600;
 }
-.login-nav-left > ul > li >a{
+.login-nav-left > ul > li > a{
     text-decoration: none;
     font-weight: 500;
     color: var(--bold-1);
@@ -86,10 +90,10 @@ body{
     color: black;
 }
 .admin-toll{
-    background-color: var(--bol-2);
+    color: black;
 }
 .admin-link{
-    color: var(--neutral-1);
+    /* color: var(--neutral-1); */
 }
 .title{
     background-color: var(--neutral-2);

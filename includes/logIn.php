@@ -23,12 +23,12 @@ if (isset($_POST['submit3']))
 
 <?php require 'header.php';?>
 <!-- Button trigger modal -->
-<button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+<button type="button" style="margin-left:10px;"  class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Login
 </button>
 
 <!-- Modal -->
-<div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="false" data-bs-keyboard="false">
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="false" data-bs-keyboard="false">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">

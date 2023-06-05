@@ -3,6 +3,10 @@ session_status();
 require 'includes/config.php';
 ?>
 <?php include ('includes/top_section.php');?>
+
+<style>
+    <?php include ('css/style.css');?>
+</style>
 <!-- rupes section begins here -->
 <div class="container my-5">
     <div class="row">
@@ -62,7 +66,7 @@ require 'includes/config.php';
         <div class="col-md-6">
         <h4>Package Name: <?php echo sprintf($r['PackageName']);?> </h4>
         <h6><h4>Package Type: <?php echo sprintf($r['PackageType']);?></h4></h6>
-        <p><b>Package Location:</b><?php  echo sprintf($r['PackageLocation']);?></p>
+        <p><b>Package Location: </b><?php  echo sprintf($r['PackageLocation']);?></p>
         <p><b>Features</b><?php echo sprintf($r['PackageFetures']);?></p>
         </div>
 
