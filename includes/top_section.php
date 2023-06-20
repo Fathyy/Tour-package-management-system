@@ -46,7 +46,6 @@ require __DIR__ . '/header.php';
 
             <div class="col-sm-12 col-md-6 col-lg-6">
               <ul class="list-items">
-                  <li class="pe-3 font-6 admin-link">Toll Number : 123-4568790</li>
                   <?php
                   require "signUp.php";
                   require "logIn.php";
@@ -59,7 +58,7 @@ require __DIR__ . '/header.php';
     </section>
     
 <?php } ?>
-<section class="title">
+<!-- <section class="title">
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
@@ -67,48 +66,44 @@ require __DIR__ . '/header.php';
          </div>
     </div>
 </div>
-</section>
+</section> -->
 
 <section class="navbar-styling">
-<div class="container">
-  <div class="row">
-<nav class="navbar navbar-expand-lg">
-  <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item pe-3">
-          <a class="nav-link active font-6" aria-current="page" href="index.php">Home</a>
-        </li>
-        <li class="nav-item pe-3">
-          <a class="nav-link font-6" href="page.php?type=aboutus">About</a>
-        </li>
-        <li class="nav-item pe-3">
-          <a class="nav-link font-6" href="package-list.php">Tour Packages</a>
-        </li>
-        <li class="nav-item pe-3">
-          <a class="nav-link font-6" href="page.php?type=privacy">Privacy Policy</a>
-        </li>
-        <li class="nav-item pe-3">
-          <a class="nav-link font-6" href="page.php?type=terms">Terms of use</a>
-        </li>
-        <li class="nav-item pe-3">
-          <a class="nav-link font-6" href="page.php?type=contact">Contact Us</a>
-        </li>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item pe-3">
+            <a class="nav-link active font-6" aria-current="page" href="index.php">Home</a>
+          </li>
+          <li class="nav-item pe-3">
+            <a class="nav-link font-6" href="page.php?type=aboutus">About</a>
+          </li>
+          <li class="nav-item pe-3">
+            <a class="nav-link font-6" href="package-list.php">Tour Packages</a>
+          </li>
+          <li class="nav-item pe-3">
+            <a class="nav-link font-6" href="page.php?type=privacy">Privacy Policy</a>
+          </li>
+          <li class="nav-item pe-3">
+            <a class="nav-link font-6" href="page.php?type=terms">Terms of use</a>
+          </li>
+          <li class="nav-item pe-3">
+            <a class="nav-link font-6" href="page.php?type=contact">Contact Us</a>
+          </li>
 
-        <?php if(isset($_SESSION['login'])){ ?>
-            <li>Need Help <a href="#" data-bs-toggle="modal" data-bs-target="#myModal3"></a></li>
-            <?php } else{ ?>
-                <li class="nav-item pe-3 mt-2"><a href="enquiry.php" class="link-remove enquiry-link font-6">Enquiry</a></li>
-                <?php } ?>
-      </ul>
+          <?php if(isset($_SESSION['login'])){ ?>
+              <li>Need Help <a href="#" data-bs-toggle="modal" data-bs-target="#myModal3"></a></li>
+              <?php } else{ ?>
+                  <li class="nav-item pe-3 mt-2"><a href="enquiry.php" class="link-remove enquiry-link font-6">Enquiry</a></li>
+                  <?php } ?>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
-</div>
-</div>
+  </nav>
             </section>
             <?php require __DIR__ . '/footer.php'; ?>
             
